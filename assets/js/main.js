@@ -86,8 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const promos = [
     "🚚 Free Delivery within Lira",
-    "💥 Discounts on All Products",
-    "📞 Call to Order"
+    "💥 Discounts on Selected Products",
+    "📞 Call or Whatsapp Us to Order"
   ];
 
   const flashText = document.getElementById("flashText");

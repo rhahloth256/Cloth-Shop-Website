@@ -562,7 +562,6 @@ body.zoom-active {
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
 }
 
-/* FLASH BANNER PROMOTION AT THE TOP */
 /* === FLASHY PROMO BANNER === */
 .flash-mode {
     background: linear-gradient(90deg, #ff4d4d, #ff9933, #ff4d4d);
@@ -605,3 +604,4 @@ body.zoom-active {
         transform: scale(1);
     }
 }
+
