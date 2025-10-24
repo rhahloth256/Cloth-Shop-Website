@@ -190,7 +190,7 @@
       "category": "shoes",
       "price": 22000,
       "description": "Best deals today",
-      "image": "/assets/img/placeholder.jpg",
+      "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761318766074_IMG_20251023_163007.jpg",
       "featured": true,
       "in_stock": true,
       "discount": 10,
