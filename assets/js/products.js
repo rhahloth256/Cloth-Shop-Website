@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const products = data.products || [];
       grid.innerHTML = "";
 
-
       // Show all in shop; only featured in home
       const displayProducts = isShop ? products : products.filter(p => p.featured);
 
@@ -33,13 +32,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const badgeLabel = p.badge || seasonalBadge || "";
         const customClass = p.badge ? "" : badgeClass;
 
-        // Price logic
-        const discounted = p.discount
-          ? Math.round(p.price * (1 - p.discount / 100))
+        // 🔧 Price logic (reversed)
+        // p.price is the actual (discounted) price entered
+        // oldPrice is computed from the discount
+        const oldPrice = p.discount
+          ? Math.round(p.price / (1 - p.discount / 100))
           : null;
+
         const priceDisplay = p.discount
-          ? `<span class="old-price">UGX ${p.price.toLocaleString()}</span>
-             <span class="new-price">UGX ${discounted.toLocaleString()}</span>`
+          ? `<span class="old-price">UGX ${oldPrice.toLocaleString()}</span>
+             <span class="new-price">UGX ${p.price.toLocaleString()}</span>`
           : `<span class="new-price">UGX ${p.price.toLocaleString()}</span>`;
 
         // Stock visuals

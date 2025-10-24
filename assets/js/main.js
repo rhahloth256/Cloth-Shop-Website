@@ -81,3 +81,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// FLASH PROMOTION BANNER
+document.addEventListener("DOMContentLoaded", () => {
+  const promos = [
+    "🚚 Free Delivery within Lira",
+    "💥 Discounts on All Products",
+    "📞 Call to Order"
+  ];
+
+  const flashText = document.getElementById("flashText");
+  let i = 0;
+
+  function showPromo() {
+    flashText.textContent = promos[i];
+    flashText.classList.add("flash-in");
+    setTimeout(() => flashText.classList.remove("flash-in"), 800);
+    i = (i + 1) % promos.length;
+  }
+
+  showPromo(); // Show the first immediately
+  setInterval(showPromo, 3000);
+});
+

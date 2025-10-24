@@ -561,3 +561,47 @@ body.zoom-active {
     transform: translateY(-5px);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
 }
+
+/* FLASH BANNER PROMOTION AT THE TOP */
+/* === FLASHY PROMO BANNER === */
+.flash-mode {
+    background: linear-gradient(90deg, #ff4d4d, #ff9933, #ff4d4d);
+    color: #fff;
+    text-align: center;
+    padding: 6px 0;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Text fade animation */
+#flashText {
+    display: inline-block;
+    animation: fadeFlash 0.8s ease-in-out;
+}
+
+.flash-in {
+    animation: fadeFlash 0.8s ease-in-out;
+}
+
+@keyframes fadeFlash {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
