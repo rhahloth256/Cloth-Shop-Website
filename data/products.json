@@ -20,7 +20,7 @@
       "price": 40000,
       "description": "Elegant evening red dress with satin finish. Perfect for events and dinners.",
       "image": "assets/img/women/women_dress_red.jpg",
-      "featured": false,
+      "featured": true,
       "in_stock": false,
       "discount": 20,
       "badge": "Christmas Deal"
@@ -189,11 +189,35 @@
       "name": "Light Blue Straps",
       "category": "shoes",
       "price": 22000,
-      "description": "Best deals today",
-      "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761318766074_IMG_20251023_163007.jpg",
+      "description": "Feel comfort at your feet and move with freedom",
+      "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761319757150_light-straps.png",
       "featured": true,
       "in_stock": true,
       "discount": 10,
+      "badge": "BRAND NEW"
+    },
+    {
+      "id": "1761319959094",
+      "name": "Gucci Straps",
+      "category": "men",
+      "price": 35000,
+      "description": "Get the warm feel at your cold feet with our cool open shoes",
+      "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761319955519_red-big-straps.jpg",
+      "featured": true,
+      "in_stock": true,
+      "discount": 2,
+      "badge": "2%"
+    },
+    {
+      "id": "1761320134828",
+      "name": "Beauty Strap",
+      "category": "men",
+      "price": 42000,
+      "description": "Beauty Style Size 41",
+      "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761320130911_beauty-41.png",
+      "featured": false,
+      "in_stock": true,
+      "discount": 5,
       "badge": "BRAND NEW"
     }
   ]
