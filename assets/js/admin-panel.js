@@ -154,8 +154,9 @@ try {
     if (i !== -1) products[i] = product;
     showStatus(`Product "${product.name}" updated locally.`, "warning");
     } else {
-    products.push(product);
-    showStatus(`Product "${product.name}" added locally.`, "warning");
+    // Add new product at the top of the list
+    products.unshift(product);
+    showStatus(`🆕 Product "${product.name}" added locally at the top.`, "success");
     }
 
     displayProducts(products);
