@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HaRié Home</title>
+
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/img/favicon.png" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="border-bottom bg-white py-3">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a
+          href="index.html"
+          class="d-flex align-items-center text-decoration-none"
+        >
+          <img
+            src="assets/img/transparent-logo.png"
+            alt="HaRié Logo"
+            height="45"
+            class="me-2"
+          />
+          <h1 class="fw-bold m-0 text-dark">HaRié</h1>
+        </a>
+        <nav>
+          <a href="shop.html" class="btn btn-dark rounded-pill"
+            >View Collection</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero position-relative">
+      <img
+        src="assets/img/feature.jpg"
+        class="img-fluid w-100 rounded-4"
+        alt="Featured Outfit"
+      />
+      <div class="hero-overlay position-absolute">
+        <h4 class="fw-bold mb-1">Shop What's In Store • Order What You Want</h4>
+        <p>
+          HaRié makes fashion easy. Browse, pick, visit us and wear your
+          favourite design.
+        </p>
+      </div>
+    </section>
+
+    <!-- PRODUCT PREVIEW GRID -->
+    <main class="container mb-5">
+      <h3 class="fw-bold my-4 text-center">Explore Our Collection</h3>
+      <div class="row g-4" id="homeProductGrid"></div>
+      <div class="text-center mt-5">
+        <a href="shop.html" class="btn btn-dark btn-lg rounded-pill px-4">
+          Show All Products →
+        </a>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="harie-footer mt-auto">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-md-4">
+            <h5 class="fw-bold text-uppercase">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="shop.html#men">Men</a></li>
+              <li><a href="shop.html#women">Women</a></li>
+              <li><a href="shop.html#bags">Bags</a></li>
+              <li><a href="shop.html#shoes">Shoes</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <h5 class="fw-bold text-uppercase">Contact</h5>
+            <ul class="list-unstyled">
+              <li>
+                <i class="bi bi-telephone me-2"></i>
+                <a href="tel:+256776118772">Call: 0776 118 772</a>
+              </li>
+              <li>
+                <i class="bi bi-whatsapp me-2 text-success"></i>
+                <a
+                  href="https://wa.me/256776118772?text=Hello%20HaRi%C3%A9!%20I%27m%20interested%20in%20your%20collection."
+                  >WhatsApp Us</a
+                >
+              </li>
+              <li>
+                <i class="bi bi-geo-alt me-2"></i> Kakoge, Opposite Omodo Main
+                Market
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <h5 class="fw-bold text-uppercase">Follow</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">TikTok</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="text-center mt-4 mb-0 copyright">
+          © <span id="year"></span> HaRié. Timeless Style, Everyday Elegance.
+        </p>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/products.js"></script>
+  </body>
+</html>

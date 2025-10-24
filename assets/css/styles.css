@@ -1,0 +1,563 @@
+/* =====================================
+   HERO — MODERN DARK FADE LOOK
+   ===================================== */
+.hero {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 60vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    color: #fff;
+}
+
+.hero img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(65%) saturate(110%);
+    transition: transform 1.2s ease;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+    pointer-events: none;
+}
+
+.hero:hover img {
+    transform: scale(1.05);
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 2;
+    padding: 3rem;
+    max-width: 650px;
+}
+
+.hero-overlay h4 {
+    font-size: clamp(1rem, 4vw, 2rem);
+    font-weight: 500;
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: 0.8rem;
+}
+
+.hero-overlay p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 0;
+}
+
+/* Modern fade-in */
+.hero-overlay {
+    animation: fadeUp 1.2s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================
+   HARIÉ – Modern Global Styling
+   ===================================== */
+:root {
+    --brand-dark: #0d0d0d;
+    --brand-light: #fdfdfd;
+    --brand-accent: #d3a564;
+    /* warm gold accent */
+    --text-muted: #7d7d7d;
+    --transition: all 0.3s ease-in-out;
+}
+
+body {
+    background: var(--brand-light);
+    color: var(--brand-dark);
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.2px;
+    scroll-behavior: smooth;
+}
+
+/* =====================================
+   PRODUCT GRID – HaRié Modern Style
+   ===================================== */
+.section-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background-color: var(--brand-accent);
+    border-radius: 5px;
+}
+
+.product-card {
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--brand-light);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    /* elegant soft border */
+    transition: var(--transition);
+}
+
+.product-card img {
+    border-radius: 18px 18px 0 0;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+}
+
+.product-card .card-body {
+    padding: 1.2rem;
+}
+
+/* =====================================
+   PRODUCT CARD TEXT — Compact, Elegant
+   ===================================== */
+.product-card h5 {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--brand-dark);
+    font-size: 0.9rem;
+    /* smaller title */
+    line-height: 1.2;
+}
+
+.product-card p {
+    color: var(--text-muted);
+    margin-bottom: 0.2rem;
+    font-size: 0.8rem;
+    /* smaller category text */
+    letter-spacing: 0.3px;
+}
+
+.price-block {
+    font-size: 0.85rem;
+    /* smaller pricing */
+    margin-top: 0.2rem;
+}
+
+.old-price {
+    color: #888;
+    text-decoration: line-through;
+    font-size: 0.75rem;
+}
+
+.new-price {
+    color: var(--brand-accent);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-left: 4px;
+}
+
+/* Smaller text across all screens */
+@media (max-width: 768px) {
+    .product-card h5 {
+        font-size: 0.85rem;
+    }
+
+    .product-card p,
+    .price-block {
+        font-size: 0.75rem;
+    }
+}
+
+/* Hover Glow Effect */
+.product-card:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-6px);
+    border-color: var(--brand-accent);
+    /* gold accent on hover */
+}
+
+/* =====================================
+   BUTTONS
+   ===================================== */
+.btn-dark {
+    background-color: var(--brand-dark);
+    border-color: var(--brand-dark);
+    transition: var(--transition);
+}
+
+.btn-dark:hover {
+    background-color: var(--brand-accent);
+    border-color: var(--brand-accent);
+    color: #fff;
+    transform: translateY(-3px);
+}
+/* =====================================
+   HARIÉ FOOTER — Minimal Luxe
+   ===================================== */
+.harie-footer {
+    background-color: #0b0b0b;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 4rem 0 2rem;
+    font-size: 0.95rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.harie-footer h5 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.harie-footer a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.harie-footer a:hover {
+    color: #d3a564;
+    /* gold accent */
+}
+
+.harie-footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.harie-footer li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.harie-footer .bi {
+    color: #d3a564;
+}
+
+.harie-footer .copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* =====================================
+   PRODUCT MODALS — Boutique Style
+   ===================================== */
+
+/* Smaller modal width and centered layout */
+.modal-dialog {
+    max-width: 760px;
+}
+
+.modal-content {
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Back button styling */
+.modal-back-btn {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 6px 14px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s ease;
+}
+
+.modal-back-btn:hover {
+    background: var(--brand-accent);
+}
+
+/* Image section — smaller, well-centered */
+.modal-content img {
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: contain;
+    background: #fafafa;
+    padding: 1rem;
+}
+
+/* Text side aligned perfectly */
+.modal-content .col-md-6.p-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: 2rem;
+}
+
+/* Buttons */
+.modal-content .btn {
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    padding: 0.6rem 0.9rem;
+}
+
+/* Smooth open animation */
+.modal.fade .modal-dialog {
+    transform: translateY(30px);
+    transition: transform 0.35s ease-out, opacity 0.35s ease-out;
+    opacity: 0;
+}
+
+.modal.show .modal-dialog {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Top-right “×” button */
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    background: transparent;
+    color: #000;
+    font-size: 1.6rem;
+    line-height: 1;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s ease;
+}
+
+.modal-close-btn:hover {
+    color: var(--brand-accent);
+}
+
+/* =====================================
+   FULLSCREEN PRODUCT IMAGE ZOOM – HaRié
+   ===================================== */
+
+.zoom-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    cursor: zoom-out;
+    animation: fadeZoomIn 0.35s ease forwards;
+}
+
+.zoom-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+    object-fit: contain;
+}
+
+.zoom-overlay img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeZoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Disable background scroll when zoom is open */
+body.zoom-active {
+    overflow: hidden;
+}
+
+/* =====================================
+   PROMO & STOCK BADGES — Polished Layout
+   ===================================== */
+
+/* Promo badge: top-left */
+.promo-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: linear-gradient(135deg, #fdf7ed 0%, #f1e2c6 100%);
+    border: 1px solid rgba(211, 165, 100, 0.5);
+    color: #3a2c1a;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.65rem;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+    transition: all 0.25s ease;
+    z-index: 3;
+}
+
+.promo-badge:hover {
+    background: linear-gradient(135deg, #d3a564 0%, #c19452 100%);
+    color: #fff;
+    border-color: transparent;
+}
+
+/* Color variants */
+.promo-badge.black-friday {
+    background: linear-gradient(135deg, #222, #000);
+    color: #fff;
+    border-color: #111;
+}
+
+.promo-badge.christmas {
+    background: linear-gradient(135deg, #fff3e0, #ffd9b3);
+    color: #7b4a1a;
+    border-color: #e0b470;
+}
+
+.promo-badge.special {
+    background: linear-gradient(135deg, #f3f0ea, #e2d5bb);
+    color: #5a4a2d;
+}
+
+/* Out-of-stock badge — lifted slightly above text area */
+.stock-badge {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    z-index: 4;
+    display: inline-block;
+    background: linear-gradient(135deg, #e35d5d, #b93f3f);
+    color: #fff;
+    padding: 3px 10px;
+    border-radius: 18px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    opacity: 0.95;
+}
+
+/* Responsive adjustment */
+@media (max-width: 576px) {
+    .stock-badge {
+        font-size: 0.55rem;
+        padding: 2px 8px;
+        top: 30px;
+        left: 10px;
+    }
+}
+
+
+/* Responsive tweak for small screens */
+@media (max-width: 576px) {
+    .promo-badge {
+        font-size: 0.55rem;
+        padding: 2px 8px;
+        top: 8px;
+        left: 8px;
+    }
+}
+
+/* =====================================
+   RESPONSIVE PRODUCT GRID 
+   ===================================== */
+#homeProductGrid,
+#product-grid {
+    display: grid !important;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    justify-content: center;
+    align-items: start;
+    animation: fadeInGrid 0.6s ease forwards;
+}
+
+/* Tablets (≥768px): 4 columns */
+@media (min-width: 768px) {
+
+    #homeProductGrid,
+    #product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Desktops (≥1200px): 5 columns */
+@media (min-width: 1200px) {
+
+    #homeProductGrid,
+    #product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Compact image height for small screens */
+@media (max-width: 576px) {
+    .product-card img {
+        height: 180px;
+        object-fit: cover;
+    }
+}
+
+/* Subtle fade-in for the product cards */
+@keyframes fadeInGrid {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Optional: make product cards pop on hover */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
