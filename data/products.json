@@ -183,6 +183,18 @@
       "in_stock": true,
       "description": "Durable style for busy days",
       "category": "bags"
+    },
+    {
+      "id": "1761318018563",
+      "name": "Light Blue Straps",
+      "category": "shoes",
+      "price": 22000,
+      "description": "Best deals today",
+      "image": "/assets/img/placeholder.jpg",
+      "featured": true,
+      "in_stock": true,
+      "discount": 10,
+      "badge": "BRAND NEW"
     }
   ]
 }
