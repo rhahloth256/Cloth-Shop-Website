@@ -1,17 +1,16 @@
 {
   "products": [
     {
-      "discount": 9,
-      "badge": "Summer Offer",
-      "price": 50000,
-      "has_promo": true,
-      "name": "Summer Dress",
-      "featured": true,
       "id": "dress-green",
-      "image": "assets/img/women/women_dress_green.jpg",
-      "in_stock": true,
+      "name": "Summer Dress",
+      "category": "women",
+      "price": 40000,
       "description": "Light, breezy cotton dress perfect for sunny days. Available in S, M, L.",
-      "category": "women"
+      "image": "assets/img/women/women_dress_green.jpg",
+      "featured": true,
+      "in_stock": true,
+      "discount": 10,
+      "badge": "Summer Offer"
     },
     {
       "id": "dress-red",
