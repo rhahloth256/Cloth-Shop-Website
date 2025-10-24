@@ -1,36 +1,27 @@
 backend:
   name: github
-  repo: rhahloth256/Cloth-Shop-Website # Your GitHub repo
-  branch: main # Make sure this matches your repo’s default branch
-  auth_scope: repo # (optional) ensures proper repo permissions
+  repo: rhahloth256/Cloth-Shop-Website
+  branch: main
 
-# Where uploaded images are stored and accessed
-media_folder: "assets/img/uploads" # Path inside the repo
-public_folder: "/assets/img/uploads" # Public URL path on your website
-
-logo_url: "/assets/img/transparent-logo.png" # Optional CMS logo (appears on login)
-
-# Optional: Customize the CMS title and slug behavior
-site_url: "https://yourdomain.com" # Replace with your actual domain
-display_url: "https://yourdomain.com" # For previews
+media_folder: "assets/img/uploads"
+public_folder: "/assets/img/uploads"
+logo_url: "/assets/img/transparent-logo.png"
 
 collections:
-  - name: "products" # Internal name
-    label: "Products" # UI label in CMS
+  - name: "products"
+    label: "Products"
     label_singular: "Product"
     description: "Manage all HaRié products displayed on the site."
-    format: "json" # Important: JSON format
+    format: "json"
     files:
-      - file: "data/products.json" # Path to your JSON file
+      - file: "data/products.json"
         label: "Product List"
         name: "products"
         fields:
           - label: "Products"
             name: "products"
             widget: "list"
-            summary: "{{fields.name}} — {{fields.category}}" # Displays product summary
-            allow_add: true
-            collapsed: false
+            summary: "{{fields.name}} — {{fields.category}}"
             fields:
               - {
                   label: "ID",
@@ -45,19 +36,13 @@ collections:
                   widget: "select",
                   options: ["men", "women", "bags", "shoes"],
                 }
-              - {
-                  label: "Image",
-                  name: "image",
-                  widget: "image",
-                  media_library: { allow_multiple: false },
-                }
+              - { label: "Image", name: "image", widget: "image" }
               - {
                   label: "Price (UGX)",
                   name: "price",
                   widget: "number",
                   value_type: "int",
                   min: 0,
-                  step: 500,
                 }
               - { label: "Description", name: "description", widget: "text" }
               - {
