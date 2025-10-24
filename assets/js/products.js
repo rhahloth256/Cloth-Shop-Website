@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
                  ${inStock ? `data-bs-toggle="modal" data-bs-target="#modal-${p.id}"` : ""}>
               ${badgeLabel ? `<span class="promo-badge ${customClass}">${badgeLabel}</span>` : ""}
               ${outOfStockBadge}
-              <img src="${p.image}" class="img-fluid" alt="${p.name}" />
+              <img src="${p.image}" class="img-fluid rounded-start" alt="${p.name}" />
               <h5 class="mt-3">${p.name}</h5>
               <p class="text-muted">${p.category} Collection</p>
               <div class="price-block">${priceDisplay}</div>
