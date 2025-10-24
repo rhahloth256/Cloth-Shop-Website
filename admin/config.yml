@@ -2,7 +2,6 @@ backend:
   name: github
   repo: rhahloth256/Cloth-Shop-Website
   branch: main
-  site_url: https://hariecollection.pages.dev
 
 media_folder: "assets/img/uploads"
 public_folder: "/assets/img/uploads"
