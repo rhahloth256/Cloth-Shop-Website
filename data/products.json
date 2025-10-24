@@ -16,7 +16,7 @@
     {
       "id": "dress-red",
       "name": "Red Dress",
-      "category": "men",
+      "category": "women",
       "price": 40000,
       "description": "Elegant evening red dress with satin finish. Perfect for events and dinners.",
       "image": "assets/img/women/women_dress_red.jpg",
@@ -51,15 +51,16 @@
       "category": "Shoes"
     },
     {
-      "price": 38000,
-      "has_promo": false,
-      "name": "Leather Tote",
-      "featured": false,
       "id": "bag-tote",
-      "image": "/assets/img/uploads/yellow-bag.png",
-      "in_stock": true,
+      "name": "Leather Tote",
+      "category": "bags",
+      "price": 38000,
       "description": "Premium handcrafted leather tote. Spacious, stylish, and built to last.",
-      "category": "Bags"
+      "image": "/assets/img/uploads/yellow-bag.png",
+      "featured": false,
+      "in_stock": true,
+      "discount": null,
+      "badge": null
     },
     {
       "badge": "Valentine’s Special",
