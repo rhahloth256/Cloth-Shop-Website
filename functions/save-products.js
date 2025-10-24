@@ -5,21 +5,19 @@ export async function onRequestPost(context) {
   const path = "data/products.json";
 
   try {
-    // Parse incoming JSON
     const { products } = await context.request.json();
     const infoUrl = `https://api.github.com/repos/${username}/${repo}/contents/${path}`;
 
     console.log("📡 Fetching file info:", infoUrl);
 
-    // STEP 1: Get current file info (to retrieve SHA for updates)
-    const infoRes = await fetch(infoUrl, {
-      headers: {
-        Authorization: `token ${GITHUB_TOKEN}`,
-        "User-Agent": "hariecollection-cms", // required by GitHub
-        Accept: "application/vnd.github.v3+json",
-      },
-    });
+    // ⚙️ Create explicit Headers object (Cloudflare-safe)
+    const headers = new Headers();
+    headers.set("Authorization", `token ${GITHUB_TOKEN}`);
+    headers.set("User-Agent", "hariecollection-cms"); // ✅ must be capitalized
+    headers.set("Accept", "application/vnd.github.v3+json");
 
+    // STEP 1: Fetch file info
+    const infoRes = await fetch(infoUrl, { headers });
     console.log("ℹ️ infoRes.status:", infoRes.status);
     const infoBody = await infoRes.text();
     console.log("📦 infoRes body:", infoBody);
@@ -31,34 +29,31 @@ export async function onRequestPost(context) {
       console.log("✅ Existing file found. SHA:", sha);
     } else if (infoRes.status === 404) {
       console.log("ℹ️ File not found — will create a new one.");
-    } else if (infoRes.status === 403) {
-      return new Response(
-        JSON.stringify({
-          error: "GitHub access forbidden. Check token scope or User-Agent.",
-        }),
-        { status: 403 }
-      );
     } else {
       return new Response(
-        JSON.stringify({ error: "Failed to read file info", infoBody }),
+        JSON.stringify({
+          error: "Failed to read file info",
+          details: infoBody,
+        }),
         { status: infoRes.status }
       );
     }
 
-    // STEP 2: Prepare content for upload (UTF-8 safe Base64)
+    // STEP 2: Prepare content (UTF-8 safe)
     const contentJson = JSON.stringify({ products }, null, 2);
-    const contentBase64 = btoa(unescape(encodeURIComponent(contentJson))); // ✅ UTF-8 safe
+    const contentBase64 = btoa(unescape(encodeURIComponent(contentJson)));
 
-    // STEP 3: Commit update (PUT = create or update)
+    // STEP 3: Push update
     console.log("🚀 Pushing update to GitHub...");
+    const putHeaders = new Headers();
+    putHeaders.set("Authorization", `token ${GITHUB_TOKEN}`);
+    putHeaders.set("User-Agent", "hariecollection-cms");
+    putHeaders.set("Accept", "application/vnd.github.v3+json");
+    putHeaders.set("Content-Type", "application/json");
+
     const putRes = await fetch(infoUrl, {
       method: "PUT",
-      headers: {
-        Authorization: `token ${GITHUB_TOKEN}`,
-        "User-Agent": "hariecollection-cms",
-        "Content-Type": "application/json",
-        Accept: "application/vnd.github.v3+json",
-      },
+      headers: putHeaders,
       body: JSON.stringify({
         message: `Update products via dashboard - ${new Date().toISOString()}`,
         content: contentBase64,
@@ -80,12 +75,10 @@ export async function onRequestPost(context) {
       );
     }
 
-    // STEP 4: Return success
     return new Response(
       JSON.stringify({ ok: true, message: "✅ Products saved to GitHub!" }),
       { status: 200, headers: { "Content-Type": "application/json" } }
     );
-
   } catch (err) {
     console.log("❌ Worker error:", err.message);
     return new Response(
