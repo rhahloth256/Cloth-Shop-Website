@@ -1,11 +1,9 @@
 backend:
   name: github
-  repo: Rhahloth/HaRie
+  repo: rhahloth256/Cloth-Shop-Website
   branch: main
-  base_url: https://harriecollection-oauth.raysokello.workers.dev
-  auth_endpoint: auth
+  site_url: https://hariecollection.pages.dev
 
-site_url: https://harriecollection.pages.dev
 media_folder: "assets/img/uploads"
 public_folder: "/assets/img/uploads"
 logo_url: "/assets/img/transparent-logo.png"
