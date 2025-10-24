@@ -5,16 +5,17 @@ export async function onRequestPost(context) {
   const path = "data/products.json";
 
   try {
+    // Parse incoming JSON
     const { products } = await context.request.json();
     const infoUrl = `https://api.github.com/repos/${username}/${repo}/contents/${path}`;
 
     console.log("📡 Fetching file info:", infoUrl);
 
-    // STEP 1: Try to get the current file's SHA (needed for updates)
+    // STEP 1: Get current file info (to retrieve SHA for updates)
     const infoRes = await fetch(infoUrl, {
       headers: {
         Authorization: `token ${GITHUB_TOKEN}`,
-        "User-Agent": "hariecollection-cms",
+        "User-Agent": "hariecollection-cms", // required by GitHub
         Accept: "application/vnd.github.v3+json",
       },
     });
@@ -27,8 +28,9 @@ export async function onRequestPost(context) {
     if (infoRes.status === 200) {
       const info = JSON.parse(infoBody);
       sha = info.sha;
+      console.log("✅ Existing file found. SHA:", sha);
     } else if (infoRes.status === 404) {
-      console.log("ℹ️ File not found, will create a new one.");
+      console.log("ℹ️ File not found — will create a new one.");
     } else if (infoRes.status === 403) {
       return new Response(
         JSON.stringify({
@@ -43,24 +45,24 @@ export async function onRequestPost(context) {
       );
     }
 
-    // STEP 2: Prepare new file content
+    // STEP 2: Prepare content for upload (UTF-8 safe Base64)
     const contentJson = JSON.stringify({ products }, null, 2);
-    const contentBase64 = btoa(contentJson);
+    const contentBase64 = btoa(unescape(encodeURIComponent(contentJson))); // ✅ UTF-8 safe
 
-    // STEP 3: Push updated file to GitHub
+    // STEP 3: Commit update (PUT = create or update)
     console.log("🚀 Pushing update to GitHub...");
     const putRes = await fetch(infoUrl, {
       method: "PUT",
       headers: {
         Authorization: `token ${GITHUB_TOKEN}`,
+        "User-Agent": "hariecollection-cms",
         "Content-Type": "application/json",
-        "User-Agent": "hariecollection-cms", // 👈 required again
         Accept: "application/vnd.github.v3+json",
       },
       body: JSON.stringify({
         message: `Update products via dashboard - ${new Date().toISOString()}`,
         content: contentBase64,
-        ...(sha ? { sha } : {}), // include SHA if file existed
+        ...(sha ? { sha } : {}),
       }),
     });
 
@@ -78,22 +80,17 @@ export async function onRequestPost(context) {
       );
     }
 
-    // STEP 4: Respond success
+    // STEP 4: Return success
     return new Response(
       JSON.stringify({ ok: true, message: "✅ Products saved to GitHub!" }),
-      {
-        status: 200,
-        headers: { "Content-Type": "application/json" },
-      }
+      { status: 200, headers: { "Content-Type": "application/json" } }
     );
+
   } catch (err) {
     console.log("❌ Worker error:", err.message);
     return new Response(
       JSON.stringify({ error: err.message }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json" },
-      }
+      { status: 500, headers: { "Content-Type": "application/json" } }
     );
   }
 }
