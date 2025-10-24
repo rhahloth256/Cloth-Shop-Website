@@ -14,17 +14,16 @@
       "category": "women"
     },
     {
-      "discount": 20,
-      "badge": "Christmas Deal",
-      "price": 40000,
-      "has_promo": false,
-      "name": "Red Dress",
-      "featured": false,
       "id": "dress-red",
-      "image": "assets/img/women/women_dress_red.jpg",
-      "in_stock": false,
+      "name": "Red Dress",
+      "category": "",
+      "price": 40000,
       "description": "Elegant evening red dress with satin finish. Perfect for events and dinners.",
-      "category": "Women"
+      "image": "assets/img/women/women_dress_red.jpg",
+      "featured": false,
+      "in_stock": true,
+      "discount": 20,
+      "badge": "Christmas Deal"
     },
     {
       "discount": 20,
