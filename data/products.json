@@ -1,6 +1,18 @@
 {
   "products": [
     {
+      "id": "1761366672107",
+      "name": "Dress",
+      "category": "women",
+      "price": 34000,
+      "description": "Perfect fit for special occasions",
+      "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761366673214_IMG_20251023_162324-removebg-preview.png",
+      "featured": true,
+      "in_stock": true,
+      "discount": 12,
+      "badge": null
+    },
+    {
       "id": "dress-green",
       "name": "Summer Dress",
       "category": "women",
@@ -19,7 +31,7 @@
       "price": 40000,
       "description": "Elegant evening red dress with satin finish. Perfect for events and dinners.",
       "image": "assets/img/women/women_dress_red.jpg",
-      "featured": true,
+      "featured": false,
       "in_stock": false,
       "discount": 20,
       "badge": "Christmas Deal"
@@ -38,16 +50,16 @@
       "category": "men"
     },
     {
-      "badge": "Limited Stock",
-      "price": 40000,
-      "has_promo": false,
-      "name": "Party Heels",
-      "featured": true,
       "id": "heels-party",
-      "image": "/assets/img/uploads/teal-heels.png",
-      "in_stock": true,
+      "name": "Party Heels",
+      "category": "",
+      "price": 40000,
       "description": "Durable sneakers with cushioned soles for all-day comfort. Stylish yet casual.",
-      "category": "Shoes"
+      "image": "/assets/img/uploads/teal-heels.png",
+      "featured": false,
+      "in_stock": true,
+      "discount": null,
+      "badge": "Limited Stock"
     },
     {
       "id": "bag-tote",
@@ -123,16 +135,16 @@
       "category": "bags"
     },
     {
-      "badge": "FEW LEFT",
-      "price": 20000,
-      "has_promo": true,
-      "name": "Push Ins",
-      "featured": true,
       "id": "berkinstock-style",
-      "image": "/assets/img/uploads/crafts.png",
-      "in_stock": true,
+      "name": "Push Ins",
+      "category": "shoes",
+      "price": 20000,
       "description": "Freedom to move, style to shine",
-      "category": "shoes"
+      "image": "/assets/img/uploads/crafts.png",
+      "featured": false,
+      "in_stock": true,
+      "discount": null,
+      "badge": "FEW LEFT"
     },
     {
       "price": 42500,
@@ -210,7 +222,7 @@
     {
       "id": "1761320134828",
       "name": "Beauty Strap",
-      "category": "men",
+      "category": "shoes",
       "price": 42000,
       "description": "Beauty Style Size 41",
       "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761320130911_beauty-41.png",
