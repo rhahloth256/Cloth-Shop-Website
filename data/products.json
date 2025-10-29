@@ -10,7 +10,8 @@
       "featured": true,
       "in_stock": true,
       "discount": null,
-      "badge": null
+      "badge": null,
+      "size": "M"
     },
     {
       "id": "1761674272708",
