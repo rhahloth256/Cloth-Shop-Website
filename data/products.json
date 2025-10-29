@@ -586,15 +586,16 @@
     },
     {
       "id": "heels-party",
-      "name": "Party Heels",
-      "category": "men",
+      "name": "Maroon Open",
+      "category": "women",
       "price": 30000,
       "description": "Durable sneakers with cushioned soles for all-day comfort. Stylish yet casual.",
       "image": "/assets/img/uploads/teal-heels.png",
       "featured": false,
       "in_stock": true,
       "discount": null,
-      "badge": "Limited Stock"
+      "badge": "Limited Stock",
+      "size": null
     },
     {
       "id": "bag-tote",
