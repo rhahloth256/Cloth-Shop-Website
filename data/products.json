@@ -8,7 +8,7 @@
       "description": "",
       "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761741673889_IMG_20251028_151133-removebg-preview.png",
       "featured": false,
-      "in_stock": true,
+      "in_stock": false,
       "discount": null,
       "badge": null,
       "size": null
@@ -47,7 +47,7 @@
       "description": "",
       "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761741513271_IMG_20251028_150641-removebg-preview.png",
       "featured": false,
-      "in_stock": true,
+      "in_stock": false,
       "discount": null,
       "badge": null,
       "size": null
@@ -99,7 +99,7 @@
       "description": "Blue leaf print giving it a glorious design",
       "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761741228776_IMG_20251028_150132-removebg-preview.png",
       "featured": false,
-      "in_stock": true,
+      "in_stock": false,
       "discount": null,
       "badge": null,
       "size": null
@@ -138,7 +138,7 @@
       "description": "All your demand for a cool design is here today",
       "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761735790296_IMG_20251028_145621-removebg-preview.png",
       "featured": false,
-      "in_stock": true,
+      "in_stock": false,
       "discount": null,
       "badge": null,
       "size": null
@@ -177,7 +177,7 @@
       "description": "Pink touch for your wardrobe to look colourful and spark your style",
       "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761735295610_IMG_20251028_145201-removebg-preview.png",
       "featured": false,
-      "in_stock": true,
+      "in_stock": false,
       "discount": null,
       "badge": null,
       "size": null
@@ -203,7 +203,7 @@
       "description": "Cool design for your fashion",
       "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761735132123_IMG_20251028_144942-removebg-preview.png",
       "featured": false,
-      "in_stock": true,
+      "in_stock": false,
       "discount": null,
       "badge": null,
       "size": null
@@ -242,7 +242,7 @@
       "description": "Rock your day out with this stylish outfit that puts you above everyone",
       "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761674344808_IMG_20251028_144502-removebg-preview.png",
       "featured": true,
-      "in_stock": true,
+      "in_stock": false,
       "discount": null,
       "badge": null,
       "size": "Medium"
@@ -267,9 +267,10 @@
       "description": "Cool and beautiful dress for your designer fits",
       "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761674169213_IMG_20251028_144215-removebg-preview.png",
       "featured": true,
-      "in_stock": true,
+      "in_stock": false,
       "discount": null,
-      "badge": null
+      "badge": null,
+      "size": null
     },
     {
       "id": "1761674117939",
@@ -315,9 +316,10 @@
       "description": "Original white t shirt. Available in our shop",
       "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761673911462_IMG_20251028_143609-removebg-preview.png",
       "featured": false,
-      "in_stock": true,
+      "in_stock": false,
       "discount": null,
-      "badge": null
+      "badge": null,
+      "size": null
     },
     {
       "id": "1761673818354",
@@ -327,9 +329,10 @@
       "description": "Call today or visit our shop to pick this up\n\nSize:",
       "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761673819528_IMG_20251028_143523-removebg-preview.png",
       "featured": false,
-      "in_stock": true,
+      "in_stock": false,
       "discount": null,
-      "badge": null
+      "badge": null,
+      "size": null
     },
     {
       "id": "1761673767849",
@@ -375,9 +378,10 @@
       "description": "Original T-shirt with a round neck \n\nSize:",
       "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761673476016_IMG_20251028_143258-removebg-preview.png",
       "featured": false,
-      "in_stock": true,
+      "in_stock": false,
       "discount": null,
-      "badge": null
+      "badge": null,
+      "size": null
     },
     {
       "id": "1761673411092",
@@ -387,9 +391,10 @@
       "description": "Original T-shirt with a nice texture",
       "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761673412067_IMG_20251028_143222-removebg-preview.png",
       "featured": false,
-      "in_stock": true,
+      "in_stock": false,
       "discount": null,
-      "badge": null
+      "badge": null,
+      "size": null
     },
     {
       "id": "1761673347818",
@@ -435,9 +440,10 @@
       "description": "Wear to any formal gathering and look fantastic. Call today or WhatsApp to make your offer",
       "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761673096573_IMG_20251028_143017-removebg-preview.png",
       "featured": false,
-      "in_stock": true,
+      "in_stock": false,
       "discount": null,
-      "badge": null
+      "badge": null,
+      "size": null
     },
     {
       "id": "1761672978455",
@@ -471,9 +477,10 @@
       "description": "Fully elastic fit that perfectly matches your body, sitting perfectly with comfort on you",
       "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761672792040_IMG_20251028_142752-removebg-preview.png",
       "featured": false,
-      "in_stock": true,
+      "in_stock": false,
       "discount": null,
-      "badge": null
+      "badge": null,
+      "size": null
     },
     {
       "id": "1761672715353",
@@ -519,9 +526,10 @@
       "description": "Easy wear long dress with a decent fit",
       "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761672383754_IMG_20251028_142436-removebg-preview.png",
       "featured": false,
-      "in_stock": true,
+      "in_stock": false,
       "discount": null,
-      "badge": null
+      "badge": null,
+      "size": null
     },
     {
       "id": "1761672307264",
@@ -531,9 +539,10 @@
       "description": "Rock your world with this new classic designer outfit \nCall us to take your order",
       "image": "https://raw.githubusercontent.com/rhahloth256/Cloth-Shop-Website/main/assets/img/uploads/1761672307636_IMG_20251028_142412-removebg-preview.png",
       "featured": false,
-      "in_stock": true,
+      "in_stock": false,
       "discount": null,
-      "badge": null
+      "badge": null,
+      "size": null
     },
     {
       "id": "1761366672107",
@@ -555,9 +564,10 @@
       "description": "Light, breezy cotton dress perfect for sunny days. Available in S, M, L.",
       "image": "assets/img/women/women_dress_green.jpg",
       "featured": true,
-      "in_stock": true,
+      "in_stock": false,
       "discount": 10,
-      "badge": "Summer Offer"
+      "badge": "Summer Offer",
+      "size": null
     },
     {
       "id": "dress-red",
@@ -653,9 +663,11 @@
       "featured": false,
       "id": "black-heels",
       "image": "/assets/img/uploads/black-heels.png",
-      "in_stock": true,
+      "in_stock": false,
       "description": "Durable heels with cushioned soles for a comfy day. Stylish yet casual.",
-      "category": "shoes"
+      "category": "shoes",
+      "badge": null,
+      "size": null
     },
     {
       "id": "sky-blue-bag",
